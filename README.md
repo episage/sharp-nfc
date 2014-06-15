@@ -6,18 +6,10 @@ You must install libnfc on your computer and then you will be able to use this l
 
 This is the code I used to download sources of libnfc and compile it on Raspberry PI running Arch Linux.
 
-	wget https://libfreefare.googlecode.com/files/libfreefare-0.4.0.tar.bz2
 	wget https://libnfc.googlecode.com/files/libnfc-1.7.0.tar.bz2
 	tar xvjf libnfc-1.7.0.tar.bz2
-	tar xvjf libfreefare-0.4.0.tar.bz2
 
 	cd libnfc-1.7.0
-	./configure --prefix=/usr
-	make
-	make install
-	cd ..
-
-	cd libfreefare-0.4.0
 	./configure --prefix=/usr
 	make
 	make install
