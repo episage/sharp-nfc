@@ -1,0 +1,4 @@
+D:\Visual Studio Projects\NFC\SharpNFC\bin\Debug\SharpNFC.dll
+D:\Visual Studio Projects\NFC\SharpNFC\bin\Debug\SharpNFC.pdb
+D:\Visual Studio Projects\NFC\SharpNFC\obj\Debug\SharpNFC.dll
+D:\Visual Studio Projects\NFC\SharpNFC\obj\Debug\SharpNFC.pdb
