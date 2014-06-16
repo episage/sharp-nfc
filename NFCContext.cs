@@ -15,24 +15,26 @@ namespace SharpNFC
 
         public NFCContext()
         {
-            var ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(IntPtr)));
-            Functions.nfc_init(ptr);
+            //var ptr = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(IntPtr)));
+            //Functions.nfc_init(ptr);
 
-            contextPointer = (IntPtr)Marshal.PtrToStructure(ptr, typeof(IntPtr));
+            //contextPointer = (IntPtr)Marshal.PtrToStructure(ptr, typeof(IntPtr));
 
-            Marshal.FreeHGlobal(ptr);
+            //Marshal.FreeHGlobal(ptr);
+
+            Functions.nfc_init(out contextPointer);
         }
 
-        public List<string> ListDevices()
+        public List<string> ListDeviceNames()
         {
-            int count = 8;
-            IntPtr connectionStringsPointer = Marshal.AllocHGlobal(Constants.NFC_BUFSIZE_CONNSTRING * count);
-            var devicesCount = Functions.nfc_list_devices(contextPointer, connectionStringsPointer, (uint)count);
+            int someUnknownCount = 8;
+            IntPtr connectionStringsPointer = Marshal.AllocHGlobal(Constants.NFC_BUFSIZE_CONNSTRING * someUnknownCount);
+            var devicesCount = Functions.nfc_list_devices(contextPointer, connectionStringsPointer, (uint)someUnknownCount);
 
             var devices = new List<string>();
             for (int i = 0; i < devicesCount; i++)
             {
-                devices.Add(Marshal.PtrToStringAnsi(connectionStringsPointer + i * count));
+                devices.Add(Marshal.PtrToStringAnsi(connectionStringsPointer + i * someUnknownCount));
             }
 
             Marshal.FreeHGlobal(connectionStringsPointer);
@@ -58,6 +60,13 @@ namespace SharpNFC
             }
 
             return new NFCDevice(devicePointer);
+        }
+
+        public string Version()
+        {
+            var ver = Functions.nfc_version();
+
+            return ver;
         }
 
         public virtual void Dispose()

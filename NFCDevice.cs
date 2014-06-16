@@ -33,7 +33,7 @@ namespace SharpNFC
             //var targetPtr = Marshal.AllocHGlobal(Marshal.SizeOf(target));
 
             var modArr = modulation.ToArray();
-            var intResult = Functions.nfc_initiator_poll_target(DevicePointer, modArr, (uint)modArr.Length, poolCount, poolingInterval, ref target);
+            var intResult = Functions.nfc_initiator_poll_target(DevicePointer, modArr, (uint)modArr.Length, poolCount, poolingInterval, out target);
             nfc_target = target;
 
             return intResult;
