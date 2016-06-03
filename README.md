@@ -1,4 +1,4 @@
-[Libnfc .NET wrapper](https://github.com/episage/typescript-es7-boilerplate)
+[Libnfc .NET wrapper](https://github.com/episage/SharpNfc)
 ====================
 
 This is .NET project which lets you use libnfc [NFC Tools](http://nfc-tools.org/index.php?title=Libnfc) from .NET C# or F#.
