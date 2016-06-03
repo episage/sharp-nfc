@@ -9,6 +9,7 @@ Requirements
 
 - Linux
 - Mono
+- installed libnfc
 
 Installation
 ---------------------
