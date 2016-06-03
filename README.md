@@ -1,7 +1,7 @@
 [Libnfc .NET wrapper](https://github.com/episage/typescript-es7-boilerplate)
 ====================
 
-This is .NET project which lets you use libnfc [NFC Tools](http://nfc-tools.org/index.php?title=Libnfc) from .NET (C#, F#, etc).
+This is .NET project which lets you use libnfc [NFC Tools](http://nfc-tools.org/index.php?title=Libnfc) from .NET C# or F#.
 
 
 Requirements
