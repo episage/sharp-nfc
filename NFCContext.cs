@@ -34,7 +34,7 @@ namespace SharpNFC
             var devices = new List<string>();
             for (int i = 0; i < devicesCount; i++)
             {
-                devices.Add(Marshal.PtrToStringAnsi(connectionStringsPointer + i * someUnknownCount));
+                devices.Add(Marshal.PtrToStringAnsi(connectionStringsPointer + i * Constants.NFC_BUFSIZE_CONNSTRING));
             }
 
             Marshal.FreeHGlobal(connectionStringsPointer);
