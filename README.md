@@ -3,6 +3,9 @@
 
 This is .NET project which lets you use libnfc [NFC Tools](http://nfc-tools.org/index.php?title=Libnfc) from .NET C# or F#.
 
+Related projects
+---------------------
+https://github.com/episage/SharpFreeFare - for reading MiFare cards (http://www.nxp.com/products/identification-and-security/mifare-ics/mifare-desfire:MC_53450)
 
 Requirements
 ---------------------
