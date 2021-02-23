@@ -64,9 +64,8 @@ namespace SharpNFC
 
         public string Version()
         {
-            var ver = Functions.nfc_version();
-
-            return ver;
+            var ptr = Functions.nfc_version();
+            return Marshal.PtrToStringAuto(ptr);   
         }
 
         public virtual void Dispose()

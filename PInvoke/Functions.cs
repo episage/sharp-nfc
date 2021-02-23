@@ -121,7 +121,7 @@ namespace SharpNFC.PInvoke
         /* Special data accessors */
         //NFC_EXPORT char *nfc_device_get_name(nfc_device *pnd);
         [DllImport("libnfc", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        public static extern string nfc_device_get_name(IntPtr pnd);
+        public static extern IntPtr nfc_device_get_name(IntPtr pnd);
         //NFC_EXPORT char *nfc_device_get_connstring(nfc_device *pnd);
         [DllImport("libnfc", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern string nfc_device_get_connstring(IntPtr pnd);
@@ -162,7 +162,7 @@ namespace SharpNFC.PInvoke
         public static extern void nfc_free(IntPtr p);
         //NFC_EXPORT char *nfc_version(void);
         [DllImport("libnfc", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-        public static extern string nfc_version();
+        public static extern IntPtr nfc_version();
         //NFC_EXPORT int nfc_device_get_information_about(nfc_device *pnd, char **buf);
         [DllImport("libnfc", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern int nfc_device_get_information_about(IntPtr pnd, ref string buf);
